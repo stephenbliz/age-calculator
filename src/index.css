@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Lightred: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Offwhite: hsl(0, 0%, 94%);
+  --Lightgrey: hsl(0, 0%, 86%);
+  --Smokeygrey: hsl(0, 1%, 44%);
+  --Offblack: hsl(0, 0%, 8%);
+
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--Lightgrey);
+}
+.main-wrapper{
+  width: 60%;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--White);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 10rem;
+  padding: 3rem;
+}
+.form{
+  width: 100%;
+}
+.field-container{
+  width: 75%;
+  display: flex;
+  gap: 5%;
+}
+.field-wrapper{
+  width: 30%;
+}
+.field-wrapper input{
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 0.1rem solid var(--Lightgrey);
+  outline: none;
+  font-weight: 800;
+  cursor: pointer;
+}
+.field-wrapper input:focus{
+  border: 0.1rem solid var(--Purple);
+}
+.field-wrapper label{
+  text-transform: uppercase;
+  color: var(--Smokeygrey);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.field-wrapper span{
+  display: none;
+  font-size: 1rem;
+  margin-top: .5rem;
+}
+.botton-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.empty{
+  width: 85%;
+  height: 0.1rem;
+  background-color: var(--Lightgrey);
+}
+.button{
+  width: 15%;
+  aspect-ratio: 1/1;
+  background-color: var(--Purple);
+  border: 0.1rem solid var(--Purple);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: var(--Offblack);
+  border: 0.1rem solid var(--Offblack);
+}
+.output{
+  width: 100%;
+}
+.para{
+  font-size: 5rem;
+  font-weight:bolder;
+  font-style: italic;
+  color: var(--Offblack);
+}
+.para span{
+  color: var(--Purple);
+}
+.invalid{
+  border: 0.1rem solid var(--Lightred) !important;
+}
+.visible{
+  display: block !important;
+  color: var(--Lightred) !important;
+}
+
+@media screen and (max-width: 480px){
+  .main-wrapper{
+    width: 90%;
+    padding: 2rem;
+  }
+  .field-container{
+    width: 100%;
+    margin-bottom: 6rem ;
+    margin-top: 2rem;
+  }
+  .botton-container{
+    width: 100%;
+    display: block;
+  }
+  .empty{
+    width: 100%;
+  }
+  .button{
+    position: relative;
+    top:-3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22%;
+    aspect-ratio: 1/1;
+  }
+  .field-wrapper label{
+    
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    font-weight: 800;
+  }
+  .field-wrapper input{
+    font-weight: 900;
+  }
+}
